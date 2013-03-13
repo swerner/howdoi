@@ -7,13 +7,19 @@ module Howdoi
     attr_accessor :result
 
     SITES = {
-      "program" => "http://stackoverflow.com",
+      "computers" => "http://stackoverflow.com",
+      "program" => "http://programmers.stackexchange.com",
       "sysadmin" => "http://serverfault.com"
     }
 
-    def initialize(site, search)
+    def initialize(site)
+      search_val = get_search_val
       doc = Nokogiri::HTML(open("#{SITES[site]}/search?q=#{search}"))
       @result = "#{SITES[site]}#{doc.css(".result-link a").first.attribute("href").value}"
+    end
+
+    def get_search_val
+      errors = File.open("/tmp/howdoi_errors")
     end
   end
 end

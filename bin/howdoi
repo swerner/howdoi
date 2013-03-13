@@ -3,5 +3,5 @@
 $:.unshift(File.dirname(__FILE__) + '/../lib') unless $:.include?(File.dirname(__FILE__) + '/../lib')
 require 'howdoi'
 
-howdoi = Howdoi::Searcher.new(ARGV[0], ARGV[1])
+howdoi = Howdoi::Searcher.new(ARGV[0])
 puts howdoi.result
