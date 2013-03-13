@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Howdoi::VERSION
   gem.authors       = ["Scott Werner"]
   gem.email         = ["stwerner@vt.edu"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{How do I fix this error?}
+  gem.summary       = %q{A rubygem that searches stackoverflow for your errors that come through STDERR and finds the first Stack Overflow answer for you}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
