@@ -14,7 +14,7 @@ module Howdoi
 
     def initialize(site)
       search_val = get_search_val
-      doc = Nokogiri::HTML(open("#{SITES[site]}/search?q=#{search}"))
+      doc = Nokogiri::HTML(open("#{SITES[site]}/search?q=#{search_val}"))
       @result = "#{SITES[site]}#{doc.css(".result-link a").first.attribute("href").value}"
     end
 
